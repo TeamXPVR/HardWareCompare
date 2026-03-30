@@ -2,8 +2,8 @@ import { Category, Product } from './types';
 import pcAmd1 from '../assets/pc-amd-1.png';
 import pcAmd2 from '../assets/pc-amd-2.png';
 import pcAmd3 from '../assets/pc-amd-3.png';
-import pcIntel1 from '../assets/pc-intel-1.jpg';
-import pcIntel2 from '../assets/pc-intel-2.jpg';
+import pcIntel1 from '../assets/pc-intel-1.png';
+import pcIntel2 from '../assets/pc-intel-2.png';
 import pcIntel3 from '../assets/pc-intel-3.png';
 
 export const PC_CATEGORIES: Category[] = [
