@@ -152,6 +152,34 @@ export const RETRO_PRODUCTS: Product[] = [
     summary: ['Do the Math ! (Première 64-bit)', 'Alien vs Predator mythique', 'Dernière console historique d\'Atari'], buyLink: '#'
   },
 
+  {
+    id: 'retro-salon-atari-pong', name: 'Atari Home Pong', category: 'salon', brand: 'Atari',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Atari-Pong-Console.jpg/1280px-Atari-Pong-Console.jpg',
+    price: 99, stock: 'out_of_stock', releaseDate: '1975',
+    specs: { 'Génération': '1ère', 'Console': 'Dédiée (Pas de cartouches)', 'Jeu': 'Pong exclusivement' },
+    summary: ['La machine qui a lancé le marché des consoles de salon', 'Commercialisée à l\'origine via Sears', 'Deux molettes intégrées au châssis'], buyLink: 'https://retrododo.com/all-atari-consoles/'
+  },
+  {
+    id: 'retro-salon-atari-2600', name: 'Atari 2600 (VCS)', category: 'salon', brand: 'Atari',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Atari-2600-Wood-4Sw-Set.png/1280px-Atari-2600-Wood-4Sw-Set.png',
+    price: 199, stock: 'out_of_stock', releaseDate: '1977',
+    specs: { 'Génération': '2ème (8-bit)', 'CPU': 'MOS 6507 à 1.19 MHz', 'Couleurs': '128' },
+    summary: ['La console de salon la plus mythique des années 80', 'Sa fameuse façade en faux bois (Woody)', 'Le légendaire Joystick CX40'], buyLink: 'https://retrododo.com/all-atari-consoles/'
+  },
+  {
+    id: 'retro-salon-atari-xegs', name: 'Atari XEGS', category: 'salon', brand: 'Atari',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Atari_XEGS_-_Computerspielemuseum-49_%2817134338672%29.jpg/1280px-Atari_XEGS_-_Computerspielemuseum-49_%2817134338672%29.jpg',
+    price: 149, stock: 'out_of_stock', releaseDate: '1987',
+    specs: { 'Génération': '3ème (Hybride Ordinateur)', 'CPU': 'MOS 6502C', 'Clavier': 'Détachable' },
+    summary: ['Un ordinateur 8-bit déguisé en console', 'Vendu avec un pistolet optique XG-1', 'Dernier sursaut de la gamme 8-bit'], buyLink: 'https://retrododo.com/all-atari-consoles/'
+  },
+  {
+    id: 'retro-salon-atari-vcs', name: 'Atari VCS (2020)', category: 'salon', brand: 'Atari',
+    image: 'https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=2670&auto=format&fit=crop',
+    price: 399, stock: 'low_stock', releaseDate: '2020',
+    specs: { 'OS': 'AtariOS (Linux)', 'CPU': 'AMD Ryzen Embedded', 'Résolution': '4K' },
+    summary: ['Un mini-PC moderne au look rétro', 'Permet de jouer aux jeux PC et classiques Atari', 'Née d\'un sulfureux financement Indiegogo'], buyLink: 'https://retrododo.com/all-atari-consoles/'
+  },
   // --- MICRO-ORDINATEURS ---
   {
     id: 'retro-micro-1', name: 'Atari ST (1040 STf)', category: 'micro', brand: 'Atari',
@@ -216,7 +244,14 @@ export const RETRO_PRODUCTS: Product[] = [
     image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Atari-Lynx-I-Handheld.jpg/1280px-Atari-Lynx-I-Handheld.jpg',
     price: 200, stock: 'low_stock', releaseDate: '1989',
     specs: { 'Type': 'Portable 16-bit', 'CPU': 'Dual Custom CMOS (Mikey & Suzy)', 'Écran': 'Couleur Rétroéclairé LCD' },
-    summary: ['Première portable couleur du marché !', 'Écran réversible pour jouer de la main gauche', 'Dévorait 6 piles AA en 4 heures'], buyLink: '#'
+    summary: ['Première portable couleur du marché !', 'Écran réversible pour jouer de la main gauche', 'Dévorait 6 piles AA en 4 heures'], buyLink: 'https://retrododo.com/all-atari-consoles/'
+  },
+  {
+    id: 'retro-portable-atari-lynx2', name: 'Atari Lynx II', category: 'portable', brand: 'Atari',
+    image: 'https://images.unsplash.com/photo-1605901309584-818e25960b8f?q=80&w=2619&auto=format&fit=crop',
+    price: 200, stock: 'out_of_stock', releaseDate: '1991',
+    specs: { 'Type': 'Portable 16-bit', 'Sons': 'Stéréo', 'Écran': 'Couleur LCD (Désactivable)' },
+    summary: ['Version compacte de la gigantesque Lynx', 'Son stéréo natif et meilleure autonomie', 'Écran rétroéclairé que l\'on pouvait désactiver en plein jour'], buyLink: 'https://retrododo.com/all-atari-consoles/'
   },
 
   // --- UPSCALERS & ÉCRANS ---
