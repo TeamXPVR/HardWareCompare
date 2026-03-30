@@ -4,23 +4,36 @@ import Home from './views/Home';
 import CategoryView from './views/CategoryView';
 import ComparisonView from './views/ComparisonView';
 import SetupBuilder from './views/SetupBuilder';
-import { CATEGORIES, Product } from './data';
+import { getUniverseData, Product, Universe } from './data';
 import './index.css';
 
 function App() {
+  const [universe, setUniverse] = useState<Universe>('pc');
   const [currentView, setCurrentView] = useState('home');
   const [activeCategoryId, setActiveCategoryId] = useState<string | null>(null);
+  
+  // Lists are per universe implicitly, but to make it rock solid, we could reset when switching.
   const [compareList, setCompareList] = useState<Product[]>([]);
   const [showComparison, setShowComparison] = useState(false);
   
-  // Initialize setup state with null for each category
-  const [setup, setSetup] = useState<Record<string, Product | null>>(() => {
-    const initialRaw: Record<string, Product | null> = {};
-    CATEGORIES.forEach(cat => {
-      initialRaw[cat.id] = null;
-    });
-    return initialRaw;
+  // Setups per universe to preserve progress!
+  const [setups, setSetups] = useState<Record<Universe, Record<string, Product | null>>>({
+    pc: {},
+    mac: {},
+    retro: {}
   });
+
+  const { categories, products } = getUniverseData(universe);
+
+  const currentSetup = setups[universe];
+
+  const handleUniverseSwitch = (newUniverse: Universe) => {
+    setUniverse(newUniverse);
+    setCurrentView('home');
+    setActiveCategoryId(null);
+    setCompareList([]);
+    setShowComparison(false);
+  };
 
   const handleViewCategory = (categoryId: string) => {
     setActiveCategoryId(categoryId);
@@ -37,7 +50,6 @@ function App() {
       }
       return prev;
     });
-    // Optional: Auto show comparison when adding the first item
     if (compareList.length === 0) {
       setShowComparison(true);
     }
@@ -45,30 +57,42 @@ function App() {
 
   const handleRemoveCompare = (productId: string) => {
     setCompareList(prev => prev.filter(p => p.id !== productId));
-    if (compareList.length === 1) setShowComparison(false); // Close if empty
+    if (compareList.length === 1) setShowComparison(false);
   };
 
   const handleAddToSetup = (product: Product) => {
-    setSetup(prev => ({
-      ...prev,
-      [product.category]: prev[product.category]?.id === product.id ? null : product
-    }));
+    setSetups(prev => {
+      const uSetup = { ...(prev[universe] || {}) };
+      // Toggle logic
+      if (uSetup[product.category]?.id === product.id) {
+        delete uSetup[product.category]; // or set to null
+      } else {
+        uSetup[product.category] = product;
+      }
+      return { ...prev, [universe]: uSetup };
+    });
   };
 
   const handleRemoveFromSetup = (categoryId: string) => {
-    setSetup(prev => ({
-      ...prev,
-      [categoryId]: null
-    }));
+    setSetups(prev => {
+      const uSetup = { ...(prev[universe] || {}) };
+      delete uSetup[categoryId];
+      return { ...prev, [universe]: uSetup };
+    });
   };
 
-  const setupCount = Object.values(setup).filter(Boolean).length;
+  const setupCount = Object.values(currentSetup).filter(Boolean).length;
 
   return (
-    <div className="app-container">
-      <Navbar currentView={currentView} setCurrentView={setCurrentView} setupCount={setupCount} />
+    <div className={`app-container universe-${universe}`}>
+      <Navbar 
+        currentView={currentView} 
+        setCurrentView={setCurrentView} 
+        setupCount={setupCount} 
+        universe={universe}
+        setUniverse={handleUniverseSwitch}
+      />
       
-      {/* Floating Compare Button if items exist and viewer isn't open */}
       {compareList.length > 0 && !showComparison && (
         <button 
           className="floating-compare-btn btn-primary animate-fade-in"
@@ -80,16 +104,25 @@ function App() {
       )}
 
       <main className="main-content">
-        {currentView === 'home' && <Home onViewCategory={handleViewCategory} />}
+        {currentView === 'home' && (
+          <Home 
+            universe={universe}
+            categories={categories}
+            onViewCategory={handleViewCategory} 
+          />
+        )}
         
         {currentView === 'category' && activeCategoryId && (
           <CategoryView 
+            universe={universe}
             categoryId={activeCategoryId} 
+            categories={categories}
+            products={products}
             onBack={() => setCurrentView('home')} 
             onCompareToggle={handleCompareToggle}
             compareList={compareList}
             onAddToSetup={handleAddToSetup}
-            setupItem={setup[activeCategoryId]}
+            setupItem={currentSetup[activeCategoryId] || null}
           />
         )}
 
@@ -104,7 +137,9 @@ function App() {
         
         {currentView === 'setup' && (
           <SetupBuilder 
-            setup={setup}
+            universe={universe}
+            categories={categories}
+            setup={currentSetup}
             onRemoveFromSetup={handleRemoveFromSetup}
             onGoToCategory={handleViewCategory}
           />

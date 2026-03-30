@@ -1,14 +1,16 @@
 import { useMemo } from 'react';
-import { CATEGORIES, Product } from '../data';
+import { Category, Product, Universe } from '../data';
 import './SetupBuilder.css';
 
 interface SetupBuilderProps {
+  universe: Universe;
+  categories: Category[];
   setup: Record<string, Product | null>;
   onRemoveFromSetup: (categoryId: string) => void;
   onGoToCategory: (categoryId: string) => void;
 }
 
-export default function SetupBuilder({ setup, onRemoveFromSetup, onGoToCategory }: SetupBuilderProps) {
+export default function SetupBuilder({ universe, categories, setup, onRemoveFromSetup, onGoToCategory }: SetupBuilderProps) {
   const totalPrice = useMemo(() => {
     return Object.values(setup).reduce((total, product) => {
       return total + (product?.price || 0);
@@ -20,7 +22,7 @@ export default function SetupBuilder({ setup, onRemoveFromSetup, onGoToCategory 
   }, [setup]);
 
   const completedSlots = Object.values(setup).filter(Boolean).length;
-  const totalSlots = CATEGORIES.length;
+  const totalSlots = categories.length;
 
   return (
     <div className="setup-builder animate-fade-in">
@@ -59,7 +61,7 @@ export default function SetupBuilder({ setup, onRemoveFromSetup, onGoToCategory 
       )}
 
       <div className="setup-slots-grid">
-        {CATEGORIES.map(category => {
+        {categories.map(category => {
           const product = setup[category.id];
           
           return (

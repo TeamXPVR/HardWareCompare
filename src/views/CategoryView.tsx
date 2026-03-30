@@ -1,9 +1,12 @@
 import { useState } from 'react';
-import { CATEGORIES, MOCK_PRODUCTS, Product } from '../data';
+import { Category, Product, Universe } from '../data';
 import './CategoryView.css';
 
 interface CategoryViewProps {
+  universe: Universe;
   categoryId: string;
+  categories: Category[];
+  products: Product[];
   onBack: () => void;
   onCompareToggle: (product: Product) => void;
   compareList: Product[];
@@ -11,9 +14,9 @@ interface CategoryViewProps {
   setupItem: Product | null;
 }
 
-export default function CategoryView({ categoryId, onBack, onCompareToggle, compareList, onAddToSetup, setupItem }: CategoryViewProps) {
-  const category = CATEGORIES.find(c => c.id === categoryId);
-  const products = MOCK_PRODUCTS.filter(p => p.category === categoryId);
+export default function CategoryView({ universe, categoryId, categories, products: allProducts, onBack, onCompareToggle, compareList, onAddToSetup, setupItem }: CategoryViewProps) {
+  const category = categories.find(c => c.id === categoryId);
+  const products = allProducts.filter(p => p.category === categoryId);
   
   if (!category) return null;
 

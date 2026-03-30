@@ -1,24 +1,35 @@
-import { CATEGORIES } from '../data';
+import { Category, Universe } from '../data';
 import './Home.css';
 
 interface HomeProps {
+  universe: Universe;
+  categories: Category[];
   onViewCategory: (categoryId: string) => void;
 }
 
-export default function Home({ onViewCategory }: HomeProps) {
+export default function Home({ universe, categories, onViewCategory }: HomeProps) {
+  const getHeroTitle = () => {
+    switch (universe) {
+      case 'mac': return <><span className="text-gradient">Assemblez le Mac</span><br/>de vos <span className="text-gradient-accent">Rêves</span></>;
+      case 'retro': return <><span className="text-gradient">Créer l'Espace Rétro</span><br/><span className="text-gradient-accent">Ultime</span></>;
+      case 'pc':
+      default: return <><span className="text-gradient">Assemblez le PC</span><br/>de vos <span className="text-gradient-accent">Rêves</span></>;
+    }
+  };
+
   return (
     <div className="home-container animate-fade-in">
       <header className="home-header">
         <h1 className="hero-title">
-          Assemblez le PC de vos <span className="text-gradient-accent">Rêves</span>
+          {getHeroTitle()}
         </h1>
         <p className="hero-subtitle">
-          Comparez les derniers composants de 2026, vérifiez les compatibilités et composez la configuration absolue au meilleur prix.
+          Comparez les derniers composants et équipements, vérifiez les compatibilités et composez la configuration absolue au meilleur prix.
         </p>
       </header>
 
       <div className="categories-grid">
-        {CATEGORIES.map((category) => (
+        {categories.map((category) => (
           <div 
             key={category.id} 
             className="category-card glass-panel"
