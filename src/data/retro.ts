@@ -1,4 +1,5 @@
 import { Category, Product } from './types';
+import pongImage from '../assets/atari-home-pong.jpg';
 
 export const RETRO_CATEGORIES: Category[] = [
   { id: 'salon', name: 'Consoles de Salon', image: 'https://upload.wikimedia.org/wikipedia/commons/8/82/NES-Console-Set.jpg', description: 'Du 8-bit à la génération 128-bit', color: 'hsl(300, 80%, 60%)' },
@@ -154,7 +155,7 @@ export const RETRO_PRODUCTS: Product[] = [
 
   {
     id: 'retro-salon-atari-pong', name: 'Atari Home Pong', category: 'salon', brand: 'Atari',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Atari-Pong-Console.jpg/1280px-Atari-Pong-Console.jpg',
+    image: pongImage,
     price: 99, stock: 'out_of_stock', releaseDate: '1975',
     specs: { 'Génération': '1ère', 'Console': 'Dédiée (Pas de cartouches)', 'Jeu': 'Pong exclusivement' },
     summary: ['La machine qui a lancé le marché des consoles de salon', 'Commercialisée à l\'origine via Sears', 'Deux molettes intégrées au châssis'], buyLink: 'https://retrododo.com/all-atari-consoles/'
