@@ -60,7 +60,16 @@ export default function CategoryView({ universe, categoryId, categories, product
                   ))}
                 </div>
                 
-                <div className="product-actions">
+                <div className="product-specs" style={{ marginTop: '0.6rem', padding: '0.5rem', background: 'rgba(0,0,0,0.3)', borderRadius: '8px', fontSize: '0.85rem' }}>
+                  {Object.entries(product.specs).map(([key, value]) => (
+                    <div key={key} style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '3px', borderBottom: '1px solid rgba(255,255,255,0.05)', paddingBottom: '2px' }}>
+                      <span style={{ color: 'var(--text-secondary)' }}>{key}</span>
+                      <span style={{ fontWeight: '500', color: '#fff', textAlign: 'right', marginLeft: '1rem' }}>{value}</span>
+                    </div>
+                  ))}
+                </div>
+                
+                <div className="product-actions" style={{ marginTop: 'auto', paddingTop: '1rem' }}>
                   <button 
                     className={`btn-compare ${isComparing ? 'active' : ''}`}
                     onClick={() => onCompareToggle(product)}
