@@ -1,10 +1,10 @@
 import { Category, Product } from './types';
-import pcAmd1 from '../assets/pc-amd-1.jpg';
-import pcAmd2 from '../assets/pc-amd-2.jpg';
-import pcAmd3 from '../assets/pc-amd-3.jpg';
+import pcAmd1 from '../assets/pc-amd-1.png';
+import pcAmd2 from '../assets/pc-amd-2.png';
+import pcAmd3 from '../assets/pc-amd-3.png';
 import pcIntel1 from '../assets/pc-intel-1.jpg';
 import pcIntel2 from '../assets/pc-intel-2.jpg';
-import pcIntel3 from '../assets/pc-intel-3.jpg';
+import pcIntel3 from '../assets/pc-intel-3.png';
 
 export const PC_CATEGORIES: Category[] = [
   { id: 'cpu', name: 'Processeurs', image: 'https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?q=80&w=2669&auto=format&fit=crop', description: 'Le cerveau de votre ordinateur', color: 'hsl(210, 100%, 50%)' },
