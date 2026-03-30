@@ -1,8 +1,8 @@
 import { Category, Product } from './types';
 
 export const RETRO_CATEGORIES: Category[] = [
-  { id: 'salon', name: 'Consoles de Salon', image: 'https://images.unsplash.com/photo-1593305841991-05c297ba4575?q=80&w=2670&auto=format&fit=crop', description: 'Du 8-bit à la génération 128-bit', color: 'hsl(300, 80%, 60%)' },
-  { id: 'portable', name: 'Consoles Portables', image: 'https://images.unsplash.com/photo-1578269174936-2709b6aeb913?q=80&w=2671&auto=format&fit=crop', description: 'Le jeu nomade d\'époque', color: 'hsl(180, 80%, 40%)' },
+  { id: 'salon', name: 'Consoles de Salon', image: 'https://upload.wikimedia.org/wikipedia/commons/8/82/NES-Console-Set.jpg', description: 'Du 8-bit à la génération 128-bit', color: 'hsl(300, 80%, 60%)' },
+  { id: 'portable', name: 'Consoles Portables', image: 'https://upload.wikimedia.org/wikipedia/commons/f/f4/Game-Boy-FL.jpg', description: 'Le jeu nomade d\'époque', color: 'hsl(180, 80%, 40%)' },
   { id: 'micro', name: 'Micro-Ordinateurs', image: 'https://upload.wikimedia.org/wikipedia/commons/1/18/Atari-1040STf-01.jpg', description: 'Atari ST, Amiga, C64', color: 'hsl(210, 60%, 50%)' },
   { id: 'upscaler', name: 'Upscalers & Écrans CRT', image: 'https://images.unsplash.com/photo-1628172909405-b778278dae84?q=80&w=2671&auto=format&fit=crop', description: 'OSSC, RetroTINK, PVM', color: 'hsl(350, 80%, 50%)' },
   { id: 'accessories', name: 'Manettes & Linkers', image: 'https://images.unsplash.com/photo-1605901309584-818e25960b8f?q=80&w=2619&auto=format&fit=crop', description: 'Everdrives et contrôleurs modernes', color: 'hsl(50, 90%, 50%)' },
