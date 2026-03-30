@@ -3,6 +3,7 @@ import { Category, Product } from './types';
 export const RETRO_CATEGORIES: Category[] = [
   { id: 'salon', name: 'Consoles de Salon', image: 'https://images.unsplash.com/photo-1593305841991-05c297ba4575?q=80&w=2670&auto=format&fit=crop', description: 'Du 8-bit à la génération 128-bit', color: 'hsl(300, 80%, 60%)' },
   { id: 'portable', name: 'Consoles Portables', image: 'https://images.unsplash.com/photo-1578269174936-2709b6aeb913?q=80&w=2671&auto=format&fit=crop', description: 'Le jeu nomade d\'époque', color: 'hsl(180, 80%, 40%)' },
+  { id: 'micro', name: 'Micro-Ordinateurs', image: 'https://upload.wikimedia.org/wikipedia/commons/1/18/Atari-1040STf-01.jpg', description: 'Atari ST, Amiga, C64', color: 'hsl(210, 60%, 50%)' },
   { id: 'upscaler', name: 'Upscalers & Écrans CRT', image: 'https://images.unsplash.com/photo-1628172909405-b778278dae84?q=80&w=2671&auto=format&fit=crop', description: 'OSSC, RetroTINK, PVM', color: 'hsl(350, 80%, 50%)' },
   { id: 'accessories', name: 'Manettes & Linkers', image: 'https://images.unsplash.com/photo-1605901309584-818e25960b8f?q=80&w=2619&auto=format&fit=crop', description: 'Everdrives et contrôleurs modernes', color: 'hsl(50, 90%, 50%)' },
 ];
@@ -85,6 +86,22 @@ export const RETRO_PRODUCTS: Product[] = [
     price: 160, stock: 'low_stock', releaseDate: '2001',
     specs: { 'Génération': '6ème (128-bit)', 'CPU': 'IBM Gekko', 'Support': 'Mini-DVD' },
     summary: ['Un design cubique avec anse solide', 'Manette unanimement plébiscitée', 'Zelda Wind Waker, Smash Bros Melee'], buyLink: '#'
+  },
+  {
+    id: 'retro-salon-12', name: 'Atari 2600+', category: 'salon', brand: 'Atari',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/b/b9/Atari-2600-Wood-4Sw-Set.jpg',
+    price: 119, stock: 'in_stock', releaseDate: 'Nov. 2023',
+    specs: { 'Compatibilité': 'Cartouches 2600 & 7800', 'Sortie': 'HDMI (4:3 et 16:9)', 'Manette': 'Joystick CX40+ inclus' },
+    summary: ['Le Revival officiel par Atari / Plaion', 'Lisez vos vieilles cartouches sur TV HD', 'Fournie avec une cartouche 10-en-1'], buyLink: 'https://www.bfmtv.com/tech/console-de-jeux/avis-aux-joueurs-nostalgiques-atari-fait-renaitre-sa-mythique-console-2600_AV-202308250240.html'
+  },
+
+  // --- MICRO-ORDINATEURS ---
+  {
+    id: 'retro-micro-1', name: 'Atari ST (1040 STf)', category: 'micro', brand: 'Atari',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/1/18/Atari-1040STf-01.jpg',
+    price: 250, stock: 'low_stock', releaseDate: '1985',
+    specs: { 'Type': 'Micro-ordinateur 16/32-bit', 'CPU': 'Motorola 68000 @ 8 MHz', 'RAM': '1 Mo (sur le 1040)', 'Sons': 'Yamaha YM2149F', 'Connectique': 'Ports MIDI In/Out natifs' },
+    summary: ['L\'ordinateur fétiche des musiciens de l\'époque', 'Lecteur de disquettes 3.5" intégré', 'Rivalité légendaire contre l\'Amiga 500'], buyLink: 'https://www.wikiwand.com/fr/Atari_ST'
   },
 
   // --- CONSOLES PORTABLES ---
