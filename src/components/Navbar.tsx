@@ -13,10 +13,13 @@ export default function Navbar({ currentView, setCurrentView, setupCount, univer
   return (
     <header className="navbar glass-panel">
       <div className="navbar-container">
-        <div className="navbar-brand" onClick={() => setCurrentView('home')}>
+        <div className="navbar-brand" onClick={() => setCurrentView('home')} style={{ display: 'flex', alignItems: 'center' }}>
           <div className="logo-icon">HW</div>
           <span className="logo-text text-gradient">HardWare</span>
           <span className="logo-text-accent text-gradient-accent">Compare</span>
+          <span style={{ fontSize: '0.8rem', color: 'var(--text-secondary)', marginLeft: '0.8rem', fontWeight: 'normal' }}>
+            (V1.2 du 30/03/2026)
+          </span>
         </div>
         
         <div className="universe-switcher" style={{ display: 'flex', gap: '0.5rem', alignItems: 'center', background: 'var(--glass-bg)', padding: '0.25rem', borderRadius: '20px', border: '1px solid var(--glass-border)' }}>
