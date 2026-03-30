@@ -94,6 +94,27 @@ export const RETRO_PRODUCTS: Product[] = [
     specs: { 'Compatibilité': 'Cartouches 2600 & 7800', 'Sortie': 'HDMI (4:3 et 16:9)', 'Manette': 'Joystick CX40+ inclus' },
     summary: ['Le Revival officiel par Atari / Plaion', 'Lisez vos vieilles cartouches sur TV HD', 'Fournie avec une cartouche 10-en-1'], buyLink: 'https://www.bfmtv.com/tech/console-de-jeux/avis-aux-joueurs-nostalgiques-atari-fait-renaitre-sa-mythique-console-2600_AV-202308250240.html'
   },
+  {
+    id: 'retro-salon-atari-5200', name: 'Atari 5200 SuperSystem', category: 'salon', brand: 'Atari',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/2/23/Atari-5200-4-Port-wController-L.jpg',
+    price: 200, stock: 'low_stock', releaseDate: '1982',
+    specs: { 'Génération': '2ème (8-bit)', 'CPU': 'MOS 6502C à 1.79 MHz', 'Couleurs': '256 (16 simultanées)' },
+    summary: ['Manettes massives à pavé numérique', 'Version consoloisée de l\'Atari 400', 'Très encombrante'], buyLink: '#'
+  },
+  {
+    id: 'retro-salon-atari-7800', name: 'Atari 7800 ProSystem', category: 'salon', brand: 'Atari',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/e/e3/Atari-7800-Console-Set.jpg',
+    price: 150, stock: 'low_stock', releaseDate: '1986',
+    specs: { 'Génération': '3ème (8-bit)', 'CPU': 'SALLIE 6502 à 1.79 MHz', 'Rétrocompatibilité': 'Jeux 2600 natifs' },
+    summary: ['Excellents portages d\'Arcade', 'Affichage de 100 sprites à l\'écran', 'Concurrente directe de la NES'], buyLink: '#'
+  },
+  {
+    id: 'retro-salon-atari-jaguar', name: 'Atari Jaguar', category: 'salon', brand: 'Atari',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/0/04/Atari-Jaguar-Console-Set.jpg',
+    price: 350, stock: 'low_stock', releaseDate: '1993',
+    specs: { 'Génération': '5ème (Marketée 64-bit)', 'CPU': 'Motorola 68000 + "Tom" & "Jerry"', 'Média': 'Cartouche' },
+    summary: ['Do the Math ! (Première 64-bit)', 'Alien vs Predator mythique', 'Dernière console historique d\'Atari'], buyLink: '#'
+  },
 
   // --- MICRO-ORDINATEURS ---
   {
@@ -102,6 +123,20 @@ export const RETRO_PRODUCTS: Product[] = [
     price: 250, stock: 'low_stock', releaseDate: '1985',
     specs: { 'Type': 'Micro-ordinateur 16/32-bit', 'CPU': 'Motorola 68000 @ 8 MHz', 'RAM': '1 Mo (sur le 1040)', 'Sons': 'Yamaha YM2149F', 'Connectique': 'Ports MIDI In/Out natifs' },
     summary: ['L\'ordinateur fétiche des musiciens de l\'époque', 'Lecteur de disquettes 3.5" intégré', 'Rivalité légendaire contre l\'Amiga 500'], buyLink: 'https://www.wikiwand.com/fr/Atari_ST'
+  },
+  {
+    id: 'retro-micro-atari-800', name: 'Atari 800', category: 'micro', brand: 'Atari',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/1/18/Atari-800-Computer-FL.jpg',
+    price: 250, stock: 'low_stock', releaseDate: '1979',
+    specs: { 'Type': 'Micro-ordinateur 8-bit', 'CPU': 'MOS 6502 à 1.79 MHz', 'Sons': 'Circuit POKEY' },
+    summary: ['Précurseur de l\'informatique grand public', 'Ports de cartouches doubles protégés', 'Clavier machine-à-écrire hyper robuste'], buyLink: '#'
+  },
+  {
+    id: 'retro-micro-atari-falcon', name: 'Atari Falcon 030', category: 'micro', brand: 'Atari',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/c/cc/Atari-Falcon030-Computer-FL.jpg',
+    price: 1200, stock: 'out_of_stock', releaseDate: '1992',
+    specs: { 'Type': 'Micro 32-bit', 'CPU': 'Motorola 68030 à 16 MHz', 'DSP': 'Motorola 56001 (Audio Master)' },
+    summary: ['Le chant du cygne des ordinateurs Atari', 'Une bête de montage musical et d\'enregistrement 16-bit', 'Aujourd\'hui extrêmement rare'], buyLink: '#'
   },
 
   // --- CONSOLES PORTABLES ---
@@ -139,6 +174,13 @@ export const RETRO_PRODUCTS: Product[] = [
     price: 90, stock: 'in_stock', releaseDate: '2004',
     specs: { 'Écran': 'TFT 4.3" 16:9', 'Support': 'UMD (Optical)' },
     summary: ['Presque une PS2 portable', 'Baladeur Vidéo et MP3 (Le futur à l\'époque)', 'La scène Custom Firmware florissante (Scène Hacks)'], buyLink: '#'
+  },
+  {
+    id: 'retro-portable-atari-lynx', name: 'Atari Lynx', category: 'portable', brand: 'Atari',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/8/87/Atari-Lynx-Mk1-Console-Set.jpg',
+    price: 200, stock: 'low_stock', releaseDate: '1989',
+    specs: { 'Type': 'Portable 16-bit', 'CPU': 'Dual Custom CMOS (Mikey & Suzy)', 'Écran': 'Couleur Rétroéclairé LCD' },
+    summary: ['Première portable couleur du marché !', 'Écran réversible pour jouer de la main gauche', 'Dévorait 6 piles AA en 4 heures'], buyLink: '#'
   },
 
   // --- UPSCALERS & ÉCRANS ---
