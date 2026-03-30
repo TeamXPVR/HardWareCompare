@@ -2,6 +2,7 @@ export interface Product {
   id: string;
   name: string;
   category: string;
+  brand?: string;
   image: string;
   price: number;
   stock: 'in_stock' | 'low_stock' | 'out_of_stock';

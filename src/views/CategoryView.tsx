@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 import { Category, Product, Universe } from '../data';
 import './CategoryView.css';
 
@@ -15,9 +15,19 @@ interface CategoryViewProps {
 }
 
 export default function CategoryView({ universe, categoryId, categories, products: allProducts, onBack, onCompareToggle, compareList, onAddToSetup, setupItem }: CategoryViewProps) {
+  const [selectedBrand, setSelectedBrand] = useState<string | 'ALL'>('ALL');
+
   const category = categories.find(c => c.id === categoryId);
-  const products = allProducts.filter(p => p.category === categoryId);
   
+  const products = useMemo(() => allProducts.filter(p => p.category === categoryId), [allProducts, categoryId]);
+  
+  const brands = useMemo(() => {
+    const list = products.map(p => p.brand).filter(Boolean) as string[];
+    return Array.from(new Set(list));
+  }, [products]);
+
+  const filteredProducts = products.filter(p => selectedBrand === 'ALL' || p.brand === selectedBrand);
+
   if (!category) return null;
 
   return (
@@ -33,9 +43,31 @@ export default function CategoryView({ universe, categoryId, categories, product
           <h1 style={{ color: category.color }}>{category.name}</h1>
         </div>
       </div>
+      
+      {brands.length > 0 && (
+        <div className="brand-filters" style={{ display: 'flex', gap: '0.8rem', padding: '0 0 1.5rem', overflowX: 'auto' }}>
+          <button 
+            className="btn-secondary"
+            onClick={() => setSelectedBrand('ALL')}
+            style={{ borderRadius: '20px', fontSize: '0.85rem', padding: '0.4rem 1rem', ...(selectedBrand === 'ALL' ? { background: category.color, borderColor: category.color, color: 'white' } : {}) }}
+          >
+            Toutes les marques
+          </button>
+          {brands.map(brand => (
+            <button 
+              key={brand}
+              className="btn-secondary"
+              onClick={() => setSelectedBrand(brand)}
+              style={{ borderRadius: '20px', fontSize: '0.85rem', padding: '0.4rem 1rem', ...(selectedBrand === brand ? { background: category.color, borderColor: category.color, color: 'white' } : {}) }}
+            >
+              {brand}
+            </button>
+          ))}
+        </div>
+      )}
 
       <div className="products-grid">
-        {products.map(product => {
+        {filteredProducts.map(product => {
           const isComparing = compareList.some(p => p.id === product.id);
           const canCompare = isComparing || compareList.length < 3;
           
