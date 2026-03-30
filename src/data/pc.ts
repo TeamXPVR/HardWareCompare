@@ -1,4 +1,10 @@
 import { Category, Product } from './types';
+import pcAmd1 from '../assets/pc-amd-1.jpg';
+import pcAmd2 from '../assets/pc-amd-2.jpg';
+import pcAmd3 from '../assets/pc-amd-3.jpg';
+import pcIntel1 from '../assets/pc-intel-1.jpg';
+import pcIntel2 from '../assets/pc-intel-2.jpg';
+import pcIntel3 from '../assets/pc-intel-3.jpg';
 
 export const PC_CATEGORIES: Category[] = [
   { id: 'cpu', name: 'Processeurs', image: 'https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?q=80&w=2669&auto=format&fit=crop', description: 'Le cerveau de votre ordinateur', color: 'hsl(210, 100%, 50%)' },
@@ -15,7 +21,7 @@ export const PC_PRODUCTS: Product[] = [
     name: 'AMD Ryzen 7 9800X3D',
     category: 'cpu',
     brand: 'AMD',
-    image: 'https://images.unsplash.com/photo-1624696941334-9ca94eb9bd82?q=80&w=2670&auto=format&fit=crop',
+    image: pcAmd1,
     price: 529,
     stock: 'low_stock',
     releaseDate: '2024',
@@ -37,7 +43,7 @@ export const PC_PRODUCTS: Product[] = [
     name: 'AMD Ryzen 9 7950X3D',
     category: 'cpu',
     brand: 'AMD',
-    image: 'https://images.unsplash.com/photo-1596700877983-58eb090d8df3?q=80&w=2670&auto=format&fit=crop',
+    image: pcAmd2,
     price: 699,
     stock: 'in_stock',
     releaseDate: '2023',
@@ -59,7 +65,7 @@ export const PC_PRODUCTS: Product[] = [
     name: 'AMD Ryzen 5 7600X',
     category: 'cpu',
     brand: 'AMD',
-    image: 'https://images.unsplash.com/photo-1555617783-05f41050d2bb?q=80&w=2670&auto=format&fit=crop',
+    image: pcAmd3,
     price: 249,
     stock: 'in_stock',
     releaseDate: '2022',
@@ -81,7 +87,7 @@ export const PC_PRODUCTS: Product[] = [
     name: 'Intel Core Ultra 9 285K',
     category: 'cpu',
     brand: 'Intel',
-    image: 'https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?q=80&w=2574&auto=format&fit=crop',
+    image: pcIntel1,
     price: 649,
     stock: 'in_stock',
     releaseDate: '2024',
@@ -103,7 +109,7 @@ export const PC_PRODUCTS: Product[] = [
     name: 'Intel Core i9-14900K',
     category: 'cpu',
     brand: 'Intel',
-    image: 'https://images.unsplash.com/photo-1620283085439-39620a1e21c4?q=80&w=2574&auto=format&fit=crop',
+    image: pcIntel2,
     price: 589,
     stock: 'in_stock',
     releaseDate: '2023',
@@ -125,7 +131,7 @@ export const PC_PRODUCTS: Product[] = [
     name: 'Intel Core i5-13600K',
     category: 'cpu',
     brand: 'Intel',
-    image: 'https://images.unsplash.com/photo-1533022138981-d10a26eb063b?q=80&w=2670&auto=format&fit=crop',
+    image: pcIntel3,
     price: 299,
     stock: 'in_stock',
     releaseDate: '2022',
