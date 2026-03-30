@@ -1,5 +1,6 @@
 import { useState, useMemo } from 'react';
 import { Category, Product, Universe } from '../data';
+import { BRAND_HISTORIES } from '../data/retro';
 import './CategoryView.css';
 
 interface CategoryViewProps {
@@ -16,6 +17,7 @@ interface CategoryViewProps {
 
 export default function CategoryView({ universe, categoryId, categories, products: allProducts, onBack, onCompareToggle, compareList, onAddToSetup, setupItem }: CategoryViewProps) {
   const [selectedBrand, setSelectedBrand] = useState<string | 'ALL'>('ALL');
+  const [isHistoryModalOpen, setIsHistoryModalOpen] = useState(false);
 
   const category = categories.find(c => c.id === categoryId);
   
@@ -63,6 +65,68 @@ export default function CategoryView({ universe, categoryId, categories, product
               {brand}
             </button>
           ))}
+          
+          {selectedBrand !== 'ALL' && BRAND_HISTORIES[selectedBrand] && (
+            <button 
+              className="btn-history"
+              onClick={() => setIsHistoryModalOpen(true)}
+              style={{
+                marginLeft: 'auto',
+                borderRadius: '20px', 
+                fontSize: '0.85rem', 
+                padding: '0.4rem 1rem',
+                background: 'linear-gradient(45deg, #e6b980, #eacda3)',
+                color: '#222',
+                border: 'none',
+                fontWeight: 'bold',
+                boxShadow: '0 4px 12px rgba(234, 205, 163, 0.4)',
+                cursor: 'pointer'
+              }}
+            >
+              📖 L'Histoire de {selectedBrand}
+            </button>
+          )}
+        </div>
+      )}
+
+      {isHistoryModalOpen && selectedBrand !== 'ALL' && BRAND_HISTORIES[selectedBrand] && (
+        <div className="history-modal-overlay" style={{
+          position: 'fixed', top: 0, left: 0, right: 0, bottom: 0,
+          background: 'rgba(0,0,0,0.8)', backdropFilter: 'blur(10px)',
+          display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 1000
+        }}>
+          <div className="history-modal-content" style={{
+            background: 'var(--surface)', padding: '2.5rem', borderRadius: '16px',
+            maxWidth: '600px', width: '90%', border: `1px solid ${category.color}`,
+            boxShadow: `0 20px 50px rgba(0,0,0,0.5)`, position: 'relative'
+          }}>
+            <button 
+              onClick={() => setIsHistoryModalOpen(false)}
+              style={{
+                position: 'absolute', top: '1rem', right: '1rem', background: 'transparent',
+                border: 'none', color: 'var(--text-secondary)', fontSize: '1.5rem', cursor: 'pointer'
+              }}
+            >
+              ×
+            </button>
+            <h2 style={{ color: category.color, marginBottom: '1.5rem', fontSize: '2rem' }}>
+              {BRAND_HISTORIES[selectedBrand].title}
+            </h2>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+              {BRAND_HISTORIES[selectedBrand].content.map((paragraph, idx) => (
+                <p key={idx} style={{ color: 'var(--text-secondary)', lineHeight: '1.6', fontSize: '1.05rem' }}>
+                  {paragraph}
+                </p>
+              ))}
+            </div>
+            <button 
+              className="btn-primary" 
+              onClick={() => setIsHistoryModalOpen(false)}
+              style={{ marginTop: '2rem', width: '100%' }}
+            >
+              Fermer l'Histoire
+            </button>
+          </div>
         </div>
       )}
 

@@ -8,6 +8,42 @@ export const RETRO_CATEGORIES: Category[] = [
   { id: 'accessories', name: 'Manettes & Linkers', image: 'https://images.unsplash.com/photo-1605901309584-818e25960b8f?q=80&w=2619&auto=format&fit=crop', description: 'Everdrives et contrôleurs modernes', color: 'hsl(50, 90%, 50%)' },
 ];
 
+export const BRAND_HISTORIES: Record<string, { title: string, content: string[] }> = {
+  'Atari': {
+    title: 'L\'Empire Atari',
+    content: [
+      'Fondée en 1972 par Nolan Bushnell, Atari est la marque pionnière absolue du jeu vidéo de salon.',
+      'Surtout connue pour Pong (Arcade) et l\'indestructible Atari 2600, elle a défini ce qu\'était une "console de jeux" à la maison et a posé les jalons de toute l\'industrie.',
+      'Malgré un âge d\'or phénoménal et la brillante ligne de ses micro-ordinateurs (Gamme ST), le fameux "Krach du jeu vidéo de 1983" (symbolisé par le jeu E.T. enfoui dans le désert) a durablement abimé la marque historique.',
+      'Ses ultimes barouds d\'honneur technologiquement avancés tels que la console Lynx ou la redoutable Jaguar n\'ont pas suffi à endiguer la deferlante de la nouvelle génération japonaise.'
+    ]
+  },
+  'Nintendo': {
+    title: 'La Royauté du Rétro',
+    content: [
+      'Incroyable destin : à l\'origine, firme centenaire fabriquant de traditionnelles cartes à jouer japonaises (Hanafuda) depuis 1889, Nintendo sauva unilatéralement l\'industrie mondiale du jeu vidéo avec la NES en 1985.',
+      'S\'ensuit une conquête totale grâce à des mascottes intemporelles conçues avec soin et amour (Mario, Zelda, Metroid) et à un règne sans partage sur le monde nomade avec la titanesque Game Boy.',
+      'Unanimement plébiscitée pour sa philosophie "Gameplay First" privilégiant le pur fun de pilotage à la course aux armements graphiques, le "Big N" continue de fasciner.'
+    ]
+  },
+  'Sega': {
+    title: 'Les Rebelles de l\'Arcade',
+    content: [
+      'Sega (Service Games) était à l\'origine un constructeur américain délocalisé au Japon créant des JukeBox et Machines d\'attrape. La marque devint très vite le roi incontesté de l\'Arcade avec de somptueuses bornes qui claquaient les yeux (et avalaient les pièces) : OutRun, Space Harrier ou After Burner.',
+      'Dans les folles années 90, SEGA a déclaré une impitoyable guerre marketing à son concurrent Nintendo via sa surpuissante Mega Drive, prônant l\'impertinence d\'un "Blast Processing" soutenu par un certain hérisson bleu atomique (Sonic).',
+      'Après avoir accouché de fantastiques mais complexes machines (Saturn et Dreamcast), SEGA, financièrement acculé, fit la dure décision d\'arrêter de fabriquer des consoles pour se dédier au logiciel...'
+    ]
+  },
+  'Sony': {
+    title: 'La Révolution 3D',
+    content: [
+      'C\'est l\'histoire de la vengeance la plus marquante de la tech : Sony, à l\'origine simple fabricant du processeur sonore magique de la Super Nintendo, était censé concevoir un lecteur CD-ROM pour celle-ci. Nintendo cassa soudainement le contrat en coulisse.',
+      'De cette cuisante trahison, Sony décida de commercialiser sa propre version du hardware dans son coin en 1994... sous le nom de PlayStation 1.',
+      'Sa conception ultra-maline dédiée très intelligemment au décodage de la "vraie 3D" qui fascinait les studios à l\'époque balaya toute la concurrence. Son lacement et le grand public changèrent l\'univers du rétrogaming à jamais.'
+    ]
+  }
+};
+
 export const RETRO_PRODUCTS: Product[] = [
   // --- CONSOLES DE SALON ---
   {
@@ -96,21 +132,21 @@ export const RETRO_PRODUCTS: Product[] = [
   },
   {
     id: 'retro-salon-atari-5200', name: 'Atari 5200 SuperSystem', category: 'salon', brand: 'Atari',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/2/23/Atari-5200-4-Port-wController-L.jpg',
+    image: 'https://images.unsplash.com/photo-1605901309584-818e25960b8f?q=80&w=2619&auto=format&fit=crop',
     price: 200, stock: 'low_stock', releaseDate: '1982',
     specs: { 'Génération': '2ème (8-bit)', 'CPU': 'MOS 6502C à 1.79 MHz', 'Couleurs': '256 (16 simultanées)' },
     summary: ['Manettes massives à pavé numérique', 'Version consoloisée de l\'Atari 400', 'Très encombrante'], buyLink: '#'
   },
   {
     id: 'retro-salon-atari-7800', name: 'Atari 7800 ProSystem', category: 'salon', brand: 'Atari',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/e/e3/Atari-7800-Console-Set.jpg',
+    image: 'https://images.unsplash.com/photo-1593118247619-e2d6f056869e?q=80&w=2670&auto=format&fit=crop',
     price: 150, stock: 'low_stock', releaseDate: '1986',
     specs: { 'Génération': '3ème (8-bit)', 'CPU': 'SALLIE 6502 à 1.79 MHz', 'Rétrocompatibilité': 'Jeux 2600 natifs' },
     summary: ['Excellents portages d\'Arcade', 'Affichage de 100 sprites à l\'écran', 'Concurrente directe de la NES'], buyLink: '#'
   },
   {
     id: 'retro-salon-atari-jaguar', name: 'Atari Jaguar', category: 'salon', brand: 'Atari',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/0/04/Atari-Jaguar-Console-Set.jpg',
+    image: 'https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=2670&auto=format&fit=crop',
     price: 350, stock: 'low_stock', releaseDate: '1993',
     specs: { 'Génération': '5ème (Marketée 64-bit)', 'CPU': 'Motorola 68000 + "Tom" & "Jerry"', 'Média': 'Cartouche' },
     summary: ['Do the Math ! (Première 64-bit)', 'Alien vs Predator mythique', 'Dernière console historique d\'Atari'], buyLink: '#'
@@ -126,14 +162,14 @@ export const RETRO_PRODUCTS: Product[] = [
   },
   {
     id: 'retro-micro-atari-800', name: 'Atari 800', category: 'micro', brand: 'Atari',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/1/18/Atari-800-Computer-FL.jpg',
+    image: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=2670&auto=format&fit=crop',
     price: 250, stock: 'low_stock', releaseDate: '1979',
     specs: { 'Type': 'Micro-ordinateur 8-bit', 'CPU': 'MOS 6502 à 1.79 MHz', 'Sons': 'Circuit POKEY' },
     summary: ['Précurseur de l\'informatique grand public', 'Ports de cartouches doubles protégés', 'Clavier machine-à-écrire hyper robuste'], buyLink: '#'
   },
   {
     id: 'retro-micro-atari-falcon', name: 'Atari Falcon 030', category: 'micro', brand: 'Atari',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/c/cc/Atari-Falcon030-Computer-FL.jpg',
+    image: 'https://images.unsplash.com/photo-1628172909405-b778278dae84?q=80&w=2671&auto=format&fit=crop',
     price: 1200, stock: 'out_of_stock', releaseDate: '1992',
     specs: { 'Type': 'Micro 32-bit', 'CPU': 'Motorola 68030 à 16 MHz', 'DSP': 'Motorola 56001 (Audio Master)' },
     summary: ['Le chant du cygne des ordinateurs Atari', 'Une bête de montage musical et d\'enregistrement 16-bit', 'Aujourd\'hui extrêmement rare'], buyLink: '#'
@@ -177,7 +213,7 @@ export const RETRO_PRODUCTS: Product[] = [
   },
   {
     id: 'retro-portable-atari-lynx', name: 'Atari Lynx', category: 'portable', brand: 'Atari',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/8/87/Atari-Lynx-Mk1-Console-Set.jpg',
+    image: 'https://images.unsplash.com/photo-1533106560950-843e9ebdb26c?q=80&w=2669&auto=format&fit=crop',
     price: 200, stock: 'low_stock', releaseDate: '1989',
     specs: { 'Type': 'Portable 16-bit', 'CPU': 'Dual Custom CMOS (Mikey & Suzy)', 'Écran': 'Couleur Rétroéclairé LCD' },
     summary: ['Première portable couleur du marché !', 'Écran réversible pour jouer de la main gauche', 'Dévorait 6 piles AA en 4 heures'], buyLink: '#'
