@@ -7,6 +7,8 @@ export interface Product {
   price: number;
   stock: 'in_stock' | 'low_stock' | 'out_of_stock';
   releaseDate: string;
+  productionYear?: number;
+  fullReleaseDate?: string;
   specs: Record<string, string>;
   summary: string[];
   buyLink: string;

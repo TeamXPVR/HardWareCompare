@@ -28,7 +28,15 @@ export default function CategoryView({ universe, categoryId, categories, product
     return Array.from(new Set(list));
   }, [products]);
 
-  const filteredProducts = products.filter(p => selectedBrand === 'ALL' || p.brand === selectedBrand);
+  const filteredProducts = useMemo(() => {
+    const list = products.filter(p => selectedBrand === 'ALL' || p.brand === selectedBrand);
+    
+    // Tri chronologique de la plus ancienne à la plus récente
+    return list.sort((a, b) => {
+      const getYear = (p: Product) => p.productionYear || parseInt(p.releaseDate.match(/\d{4}/)?.[0] || '0', 10) || 0;
+      return getYear(a) - getYear(b);
+    });
+  }, [products, selectedBrand]);
 
   if (!category) return null;
 
@@ -163,6 +171,21 @@ export default function CategoryView({ universe, categoryId, categories, product
                       <span style={{ fontWeight: '500', color: '#fff', textAlign: 'right', marginLeft: '1rem' }}>{value}</span>
                     </div>
                   ))}
+                </div>
+                
+                <div className="product-dates" style={{ marginTop: '0.8rem', padding: '0.8rem', background: 'var(--glass-bg)', border: '1px solid var(--glass-border)', borderRadius: '8px', fontSize: '0.85rem' }}>
+                  <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '6px' }}>
+                    <span style={{ color: 'var(--text-secondary)' }}>Année de production:</span>
+                    <span style={{ fontWeight: 'bold', color: 'var(--accent-primary)' }}>
+                      {product.productionYear || product.releaseDate.match(/\d{4}/)?.[0] || 'Inconnue'}
+                    </span>
+                  </div>
+                  <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                    <span style={{ color: 'var(--text-secondary)' }}>Mise en vente:</span>
+                    <span style={{ color: 'var(--text)' }}>
+                      {product.fullReleaseDate || product.releaseDate}
+                    </span>
+                  </div>
                 </div>
                 
                 <div className="product-actions" style={{ marginTop: 'auto', paddingTop: '1rem' }}>
