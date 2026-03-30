@@ -62,7 +62,7 @@ export const RETRO_PRODUCTS: Product[] = [
   },
   {
     id: 'retro-salon-3', name: 'Sega Master System', category: 'salon', brand: 'Sega',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/9/9e/Sega-Master-System-Set.jpg',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Sega-Master-System-Set.jpg/1280px-Sega-Master-System-Set.jpg',
     price: 100, stock: 'low_stock', releaseDate: '1986',
     specs: { 'Génération': '3ème (8-bit)', 'CPU': 'Zilog Z80', 'Palette': '32 couleurs simultanées', 'Audio': 'PSG / FM' },
     summary: ['Palette de couleurs supérieure à la NES', 'Alex Kidd', 'Incroyable succès Européen et Brésilien'], buyLink: '#'
@@ -76,28 +76,28 @@ export const RETRO_PRODUCTS: Product[] = [
   },
   {
     id: 'retro-salon-5', name: 'Super Nintendo (SNES)', category: 'salon', brand: 'Nintendo',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/3/37/Super_Famicom_console.jpg',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/SNES-Mod1-Console-Set.png/1280px-SNES-Mod1-Console-Set.png',
     price: 150, stock: 'in_stock', releaseDate: '1990',
     specs: { 'Génération': '4ème (16-bit)', 'CPU': 'Ricoh 5A22', 'Audio': 'Sony SPC700', 'Puces': 'Super FX, SA-1' },
     summary: ['L\'âge d\'or du RPG (Chrono Trigger)', 'Mode 7 (Faust 3D)', 'Puce sonore Sony'], buyLink: '#'
   },
   {
     id: 'retro-salon-6', name: 'Sega Saturn', category: 'salon', brand: 'Sega',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/2/23/Sega-Saturn-Console-Set-Mk1.jpg',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Sega-Saturn-Console-Set-Mk2.png/1280px-Sega-Saturn-Console-Set-Mk2.png',
     price: 180, stock: 'low_stock', releaseDate: '1994',
     specs: { 'Génération': '5ème (32-bit)', 'CPU': 'Dual Hitachi SH-2', 'Support': 'CD-ROM' },
     summary: ['La reine absolue de l\'Arcade 2D', 'Architecture infernale Dual-CPU', 'Panzer Dragoon'], buyLink: '#'
   },
   {
     id: 'retro-salon-7', name: 'Sony PlayStation (PS1)', category: 'salon', brand: 'Sony',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/9/95/PSX-Console-wController.jpg',
+    image: 'https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=2670&auto=format&fit=crop',
     price: 70, stock: 'in_stock', releaseDate: '1994',
     specs: { 'Génération': '5ème (32-bit)', 'CPU': 'R3000A RISC à 33.8 MHz', 'Support': 'CD-ROM' },
     summary: ['L\'avènement de la 3D facile', 'Metal Gear Solid, Final Fantasy VII', 'Démocratisation du jeu vidéo énorme'], buyLink: '#'
   },
   {
     id: 'retro-salon-8', name: 'Nintendo 64', category: 'salon', brand: 'Nintendo',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/0/02/N64-Console-Set.jpg',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/N64-Console-Set.png/1280px-N64-Console-Set.png',
     price: 140, stock: 'in_stock', releaseDate: '1996',
     specs: { 'Génération': '5ème (64-bit)', 'CPU': 'NEC VR4300', 'Co-Processeur': 'SGI Reality' },
     summary: ['Mario 64 et la gestion caméra 3D parfaite', '4 ports manettes d\'un coup', 'Un joypad totalement asymétrique'], buyLink: '#'
@@ -118,7 +118,7 @@ export const RETRO_PRODUCTS: Product[] = [
   },
   {
     id: 'retro-salon-11', name: 'Nintendo GameCube', category: 'salon', brand: 'Nintendo',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/2/2b/GameCube-Console-Set.jpg',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/GameCube-Console-Set.png/1280px-GameCube-Console-Set.png',
     price: 160, stock: 'low_stock', releaseDate: '2001',
     specs: { 'Génération': '6ème (128-bit)', 'CPU': 'IBM Gekko', 'Support': 'Mini-DVD' },
     summary: ['Un design cubique avec anse solide', 'Manette unanimement plébiscitée', 'Zelda Wind Waker, Smash Bros Melee'], buyLink: '#'
@@ -132,7 +132,7 @@ export const RETRO_PRODUCTS: Product[] = [
   },
   {
     id: 'retro-salon-atari-5200', name: 'Atari 5200 SuperSystem', category: 'salon', brand: 'Atari',
-    image: 'https://images.unsplash.com/photo-1605901309584-818e25960b8f?q=80&w=2619&auto=format&fit=crop',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Atari-5200-4-Port-wController-L.jpg/1280px-Atari-5200-4-Port-wController-L.jpg',
     price: 200, stock: 'low_stock', releaseDate: '1982',
     specs: { 'Génération': '2ème (8-bit)', 'CPU': 'MOS 6502C à 1.79 MHz', 'Couleurs': '256 (16 simultanées)' },
     summary: ['Manettes massives à pavé numérique', 'Version consoloisée de l\'Atari 400', 'Très encombrante'], buyLink: '#'
@@ -185,35 +185,35 @@ export const RETRO_PRODUCTS: Product[] = [
   },
   {
     id: 'retro-portable-2', name: 'Sega Game Gear', category: 'portable', brand: 'Sega',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/b/b3/Sega-Game-Gear-WB.jpg',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Sega-Game-Gear-WB.png/1280px-Sega-Game-Gear-WB.png',
     price: 140, stock: 'low_stock', releaseDate: '1990',
     specs: { 'Écran': 'Couleur Rétroéclairé LCD', 'Autonomie': '~3H' },
     summary: ['La Master-System au bout des mains', 'Demande 6 piles LR6 en un éclair', 'Prend au dépourvu Nintendo sur la Lumière'], buyLink: '#'
   },
   {
     id: 'retro-portable-3', name: 'Game Boy Color (Mod IPSQ5)', category: 'portable', brand: 'Nintendo',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/8/82/Nintendo-Game-Boy-Color-FL.jpg',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/2/26/Nintendo_Game_Boy_Color.png',
     price: 220, stock: 'in_stock', releaseDate: 'Mod',
     specs: { 'Écran': 'Mod IPS TFT', 'Batterie': 'Batterie Li-po intégrée (USB-C)', 'Coque': 'Shell Custom' },
     summary: ['Pleine lumière pour l\'extérieur !', 'Rétro-Modding ultime pour Pokemon Silver', 'Recharge via USB-C moderne'], buyLink: '#'
   },
   {
-    id: 'retro-portable-4', name: 'Game Boy Advance SP (AGS-101)', category: 'portable', brand: 'Nintendo',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/d/df/Nintendo-Game-Boy-Advance-SP-Front.jpg',
-    price: 250, stock: 'out_of_stock', releaseDate: '2005',
+    id: 'retro-portable-4', name: 'Game Boy Advance SP', category: 'portable', brand: 'Nintendo',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Game-Boy-Advance-SP-Mk1-Blue.png/1280px-Game-Boy-Advance-SP-Mk1-Blue.png',
+    price: 250, stock: 'out_of_stock', releaseDate: '2003',
     specs: { 'Écran': 'Rétroéclairé Modèle Intense', 'Design': 'Clapet pour protéger', 'Backward P.': 'Lit Gameboy Grise & Color' },
     summary: ['Format extra-compacte luxueux', 'Jouer sous la couette sans add-on ver de terre !', 'Dernière représentante vraie de la GameBoy'], buyLink: '#'
   },
   {
     id: 'retro-portable-5', name: 'Sony PlayStation Portable (PSP)', category: 'portable', brand: 'Sony',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/4/46/PlayStation_Portable.jpg',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Psp-1000.jpg/1280px-Psp-1000.jpg',
     price: 90, stock: 'in_stock', releaseDate: '2004',
     specs: { 'Écran': 'TFT 4.3" 16:9', 'Support': 'UMD (Optical)' },
     summary: ['Presque une PS2 portable', 'Baladeur Vidéo et MP3 (Le futur à l\'époque)', 'La scène Custom Firmware florissante (Scène Hacks)'], buyLink: '#'
   },
   {
     id: 'retro-portable-atari-lynx', name: 'Atari Lynx', category: 'portable', brand: 'Atari',
-    image: 'https://images.unsplash.com/photo-1533106560950-843e9ebdb26c?q=80&w=2669&auto=format&fit=crop',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Atari-Lynx-I-Handheld.jpg/1280px-Atari-Lynx-I-Handheld.jpg',
     price: 200, stock: 'low_stock', releaseDate: '1989',
     specs: { 'Type': 'Portable 16-bit', 'CPU': 'Dual Custom CMOS (Mikey & Suzy)', 'Écran': 'Couleur Rétroéclairé LCD' },
     summary: ['Première portable couleur du marché !', 'Écran réversible pour jouer de la main gauche', 'Dévorait 6 piles AA en 4 heures'], buyLink: '#'
@@ -222,21 +222,21 @@ export const RETRO_PRODUCTS: Product[] = [
   // --- UPSCALERS & ÉCRANS ---
   {
     id: 'retro-upscaler-1', name: 'RetroTINK-4K', category: 'upscaler', brand: 'RetroTINK',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/b/b5/Sony-BVM-D9H5U-Monitor-FL.jpg', // Used generic cool scaling image replacement (PVM box)
+    image: 'https://images.unsplash.com/photo-1628172909405-b778278dae84?q=80&w=2671&auto=format&fit=crop',
     price: 750, stock: 'out_of_stock', releaseDate: '2023',
     specs: { 'Entrées': 'Péritel, S-Video, Component, VGA, RGB', 'Sortie': 'HDMI 4K 60Hz', 'Features': 'CRT Masks, HDR, Lag Zéro' },
     summary: ['Transforme le signal composite et Peritel en vrai 4K net', 'Magie des filtres CRT denses simulés via FP', 'Coûte aussi cher qu\'un PC, mais donne un résultat Saint-Graal'], buyLink: '#'
   },
   {
     id: 'retro-upscaler-2', name: 'OSSC Pro', category: 'upscaler', brand: 'OSSC',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/b/b5/Sony-BVM-D9H5U-Monitor-FL.jpg', 
+    image: 'https://images.unsplash.com/photo-1628172909405-b778278dae84?q=80&w=2671&auto=format&fit=crop', 
     price: 350, stock: 'in_stock', releaseDate: '2023',
     specs: { 'Architecture': 'FPGA pur silicium', 'Entrées': 'SCART RGB, Composante' },
     summary: ['Open source et mise à jour communautaire incessante', 'Le monstre de la multiplication de ligne', 'Extrêmement réactif'], buyLink: '#'
   },
   {
     id: 'retro-upscaler-3', name: 'Sony BVM-20F1E (Moniteur CRT)', category: 'upscaler', brand: 'Sony',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/b/b5/Sony-BVM-D9H5U-Monitor-FL.jpg',
+    image: 'https://images.unsplash.com/photo-1593305841991-05c297ba4575?q=80&w=2670&auto=format&fit=crop',
     price: 1500, stock: 'low_stock', releaseDate: '1990s',
     specs: { 'Technologie': 'Trinitron HR (Broadcast Grade)', 'Format': '4:3', 'TVL': '900 Lignes' },
     summary: ['Scanlines incisives comme des couteaux de boucher', 'Pèse 30 Kilogrammes', 'Un tube dont sont amoureux tous les collectionneurs riches'], buyLink: '#'
@@ -245,21 +245,21 @@ export const RETRO_PRODUCTS: Product[] = [
   // --- MANETTES & LINKERS ---
   {
     id: 'retro-acc-1', name: 'FXPAK PRO', category: 'accessories', brand: 'Krikzz',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/9/98/Super-Famicom-Controller.jpg',
+    image: 'https://images.unsplash.com/photo-1605901309584-818e25960b8f?q=80&w=2619&auto=format&fit=crop',
     price: 225, stock: 'in_stock', releaseDate: '2019',
     specs: { 'Compatibilité': 'SNES (Toutes régions)', 'FPGA': 'Emulation complète des co-processeurs' },
     summary: ['Lire les jeux aux puces capricieuses Super FX', '100% de la romset Super Nintendo sur ta vraie console', 'Permets les musiques HQ par dessus les vieux spirtes'], buyLink: '#'
   },
   {
     id: 'retro-acc-2', name: 'Mega EverDrive PRO', category: 'accessories', brand: 'Krikzz',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/9/98/Super-Famicom-Controller.jpg', 
+    image: 'https://images.unsplash.com/photo-1605901309584-818e25960b8f?q=80&w=2619&auto=format&fit=crop', 
     price: 215, stock: 'in_stock', releaseDate: '2020',
     specs: { 'Compatibilité': 'Megadrive, MegaCD via FPGA', 'Ram': 'Save states à chaud' },
     summary: ['Permet de charger des ISO de MEGA-CD depuis la carte SD', 'Plus besoin de réparer ta Mega CD dont la courroie casse', 'Menu hyper fluides'], buyLink: '#'
   },
   {
     id: 'retro-acc-3', name: '8BitDo M30 (2.4ghz)', category: 'accessories', brand: '8BitDo',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/9/98/Super-Famicom-Controller.jpg', 
+    image: 'https://images.unsplash.com/photo-1531737212413-667205e1cda7?q=80&w=2669&auto=format&fit=crop', 
     price: 40, stock: 'in_stock', releaseDate: '2022',
     specs: { 'Design': 'Inspiration Saturn 6 boutons', 'Connexion': '2.4GHz Dongle Port Manette' },
     summary: ['Un vrai pad sans fil au feeling original parfait', 'Le graal absolu pour les versus fighting retro (Street Fighter)', 'Latence imperceptible'], buyLink: '#'
