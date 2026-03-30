@@ -9,63 +9,138 @@ export const PC_CATEGORIES: Category[] = [
 ];
 
 export const PC_PRODUCTS: Product[] = [
-  // CPUs
+  // --- PROCÉSSEURS (CPU) INTEL & AMD ---
   {
-    id: 'cpu-1',
+    id: 'pc-cpu-9800x3d',
+    name: 'AMD Ryzen 7 9800X3D',
+    category: 'cpu',
+    brand: 'AMD',
+    image: 'https://images.unsplash.com/photo-1624696941334-9ca94eb9bd82?q=80&w=2670&auto=format&fit=crop',
+    price: 529,
+    stock: 'low_stock',
+    releaseDate: '2024',
+    productionYear: 2024,
+    fullReleaseDate: '7 Novembre 2024',
+    specs: {
+      'Cores': '8',
+      'Threads': '16',
+      'Base Clock': '4.7 GHz',
+      'Boost Clock': '5.2 GHz',
+      'TDP': '120W',
+      'Socket': 'AM5'
+    },
+    summary: ['Le roi incontesté du Gaming', 'Technologie 3D V-Cache 2ème Gen', 'Meilleure vente Materiel.net'],
+    buyLink: 'https://www.materiel.net/guide-achat/g5-le-processeur-pc/5355/'
+  },
+  {
+    id: 'pc-cpu-7950x3d',
+    name: 'AMD Ryzen 9 7950X3D',
+    category: 'cpu',
+    brand: 'AMD',
+    image: 'https://images.unsplash.com/photo-1596700877983-58eb090d8df3?q=80&w=2670&auto=format&fit=crop',
+    price: 699,
+    stock: 'in_stock',
+    releaseDate: '2023',
+    productionYear: 2023,
+    fullReleaseDate: '28 Février 2023',
+    specs: {
+      'Cores': '16',
+      'Threads': '32',
+      'Base Clock': '4.2 GHz',
+      'Boost Clock': '5.7 GHz',
+      'TDP': '120W',
+      'Socket': 'AM5'
+    },
+    summary: ['Hyper-polyvalent (Jeu et Applicatif)', '144 Mo de cache total', 'Extrêmement réactif'],
+    buyLink: 'https://www.amd.com/fr/products/specifications/processors.html'
+  },
+  {
+    id: 'pc-cpu-7600x',
+    name: 'AMD Ryzen 5 7600X',
+    category: 'cpu',
+    brand: 'AMD',
+    image: 'https://images.unsplash.com/photo-1555617783-05f41050d2bb?q=80&w=2670&auto=format&fit=crop',
+    price: 249,
+    stock: 'in_stock',
+    releaseDate: '2022',
+    productionYear: 2022,
+    fullReleaseDate: '27 Septembre 2022',
+    specs: {
+      'Cores': '6',
+      'Threads': '12',
+      'Base Clock': '4.7 GHz',
+      'Boost Clock': '5.3 GHz',
+      'TDP': '105W',
+      'Socket': 'AM5'
+    },
+    summary: ['Porte d\'entrée parfaite sur AM5', 'Rapport performances/prix exceptionnel', 'Idéal pour le 1080p et 1440p'],
+    buyLink: 'https://www.materiel.net/guide-achat/g5-le-processeur-pc/5355/'
+  },
+  {
+    id: 'pc-cpu-ultra285k',
     name: 'Intel Core Ultra 9 285K',
     category: 'cpu',
-    image: 'https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?q=80&w=400&auto=format&fit=crop',
+    brand: 'Intel',
+    image: 'https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?q=80&w=2574&auto=format&fit=crop',
     price: 649,
     stock: 'in_stock',
-    releaseDate: 'Q4 2024',
+    releaseDate: '2024',
+    productionYear: 2024,
+    fullReleaseDate: '24 Octobre 2024',
     specs: {
       'Cores': '24 (8P+16E)',
-      'Threads': '24',
+      'Threads': '24 (Pas d\'Hyper-Threading)',
       'Base Clock': '3.2 GHz',
       'Boost Clock': '5.7 GHz',
       'TDP': '125W',
       'Socket': 'LGA 1851'
     },
-    summary: ['Performances ultimes', 'Excellente efficacité énergétique', 'Nouveau socket'],
-    buyLink: 'https://example.com/buy/cpu-1'
+    summary: ['Nouvelle architecture Arrow Lake', 'Excellente efficacité énergétique (Froid)', 'Adieu l\'Hyperthreading'],
+    buyLink: 'https://www.intel.fr/content/www/fr/fr/products/details/processors.html'
   },
   {
-    id: 'cpu-2',
-    name: 'AMD Ryzen 9 9950X',
+    id: 'pc-cpu-14900k',
+    name: 'Intel Core i9-14900K',
     category: 'cpu',
-    image: 'https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?q=80&w=400&auto=format&fit=crop',
-    price: 699,
-    stock: 'low_stock',
-    releaseDate: 'Q3 2024',
-    specs: {
-      'Cores': '16',
-      'Threads': '32',
-      'Base Clock': '4.3 GHz',
-      'Boost Clock': '5.7 GHz',
-      'TDP': '170W',
-      'Socket': 'AM5'
-    },
-    summary: ['Roi du multithread', 'Architecture Zen 5', 'Future-proof AM5'],
-    buyLink: 'https://example.com/buy/cpu-2'
-  },
-  {
-    id: 'cpu-3',
-    name: 'AMD Ryzen 7 7800X3D',
-    category: 'cpu',
-    image: 'https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?q=80&w=400&auto=format&fit=crop',
-    price: 399,
+    brand: 'Intel',
+    image: 'https://images.unsplash.com/photo-1620283085439-39620a1e21c4?q=80&w=2574&auto=format&fit=crop',
+    price: 589,
     stock: 'in_stock',
-    releaseDate: 'Q1 2023',
+    releaseDate: '2023',
+    productionYear: 2023,
+    fullReleaseDate: '17 Octobre 2023',
     specs: {
-      'Cores': '8',
-      'Threads': '16',
-      'Base Clock': '4.2 GHz',
-      'Boost Clock': '5.0 GHz',
-      'TDP': '120W',
-      'Socket': 'AM5'
+      'Cores': '24 (8P+16E)',
+      'Threads': '32',
+      'Base Clock': '3.2 GHz',
+      'Boost Clock': '6.0 GHz',
+      'TDP': '253W',
+      'Socket': 'LGA 1700'
     },
-    summary: ['Le meilleur pour le gaming', 'Technologie 3D V-Cache', 'Rapport qualité/prix imbattable'],
-    buyLink: 'https://example.com/buy/cpu-3'
+    summary: ['Le titan de 14ème génération', 'Fréquence jusqu\'à 6.0 GHz en Turbo', 'A prévoir : gros refroidissement requis'],
+    buyLink: 'https://www.materiel.net/guide-achat/g5-le-processeur-pc/5355/'
+  },
+  {
+    id: 'pc-cpu-13600k',
+    name: 'Intel Core i5-13600K',
+    category: 'cpu',
+    brand: 'Intel',
+    image: 'https://images.unsplash.com/photo-1533022138981-d10a26eb063b?q=80&w=2670&auto=format&fit=crop',
+    price: 299,
+    stock: 'in_stock',
+    releaseDate: '2022',
+    productionYear: 2022,
+    fullReleaseDate: '20 Octobre 2022',
+    specs: {
+      'Cores': '14 (6P+8E)',
+      'Threads': '20',
+      'Base Clock': '3.5 GHz',
+      'Boost Clock': '5.1 GHz',
+      'TDP': '181W',
+      'Socket': 'LGA 1700'
+    },
+    summary: ['Best-seller absolu d\'Intel', 'Le maître du milieu de gamme', 'Polyvalence totale pour jouer et travailler'],
+    buyLink: 'https://www.intel.fr/content/www/fr/fr/products/details/processors.html'
   },
   
   // GPUs
